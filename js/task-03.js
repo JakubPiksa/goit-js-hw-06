@@ -24,4 +24,6 @@ document
         image => `<li><img class="gallery__item" src= "${image.url}" alt= "${image.alt}" /></li>`
       )
       .join('')
-  );
+);
+  
+
