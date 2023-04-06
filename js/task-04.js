@@ -2,8 +2,24 @@
 //Dodaj click listeners do przycisków, i przy ich pomocy zwiększaj i zmniejszaj wartość licznika.
 //Aktualizuj interfejs (widok HTML) nową wartością zmiennej counterValue po każdej jej zmianie.
 
+const buttonLess = document.querySelector('[data-action="decrement"]');
+const buttonMore = document.querySelector('[data-action="increment"]');
 
-const counterValue = `#value`;
+let counterValue = 0;
+
+function currentCounter() {
+  document.getElementById("value").innerText = counterValue;
+}
+
+buttonLess.addEventListener("click", () => {
+  counterValue -= 1;
+  currentCounter();
+});
+
+buttonMore.addEventListener("click", () => {
+  counterValue += 1;
+  currentCounter();
+});
 
 
 
@@ -12,4 +28,3 @@ const counterValue = `#value`;
 
 
 
-console.log(counterValue);
